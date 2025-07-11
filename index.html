@@ -1,205 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./style.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Narrow">
-        <title>Alexandria Hancock Portfolio</title>
-        <style>
-            .title {
-                font-size: 4rem;
-                font-family: 'Archivo Black', sans-serif;
-            }
-            .links-container {
-                display: flex;
-                justify-content: space-around;
-                text-align: center;
-                flex-wrap: wrap;
-                margin-top: 0px;
-                margin-bottom: 30px;
-            }
-            .links-container > * {
-                width: 200px;
-            }
-            .header {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            #summary {
-                font-size: 1.5rem;
-                font-family: 'Actor', sans-serif;
-                margin-left: 20px;
-                margin-top: 0;
-                margin-bottom: 40px;
-                display: flex;
-            }
-            .character-profile {
-                max-height: 300px;
-                margin-left: 20px;
-                margin-top: 30px;
-                border-color: #3f1b22;
-                border-style: solid;
-                border-width: 5px;
-                border-radius: 10px;
-                float: left;
-            }
-            .work-container, .education-container, .skills-container {
-                margin: 20px;
-                padding: 20px;
-                padding-top: 5px;
-                background-color: #cc6e57ab;
-                border-radius: 5px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            }
-            .work-item {
-                font-size: 1em;
-                font-family: 'Actor', sans-serif;
-                margin: 10px;
-                padding: 20px;
-                background-color: #f0f0f0;
-                border-radius: 5px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            }
-            .work-detail {
-                font-style: italic;
-                font-size: small;
-                text-align: left;
-                color: #555;
-            }
-            .logo {
-                max-height: 75px;
-                margin-right: 20px;
-            }
-            .character {
-                position: absolute;
-                width: 375px;
-                height: 500px;
-                top: 20px;
-                right: -100px;
-            }
-            @media (max-width: 650px) {
-                .character {
-                    display: none;
-                }
-                .character-profile {
-                    float: none;
-                    max-height: 200px;
-                }
-                .links-container > * {
-                    width: 100px;
-                }
-                .title {
-                    font-size: 2.5rem;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <div class="header">
-            <img src="./assets/Logo girl.png" alt="Profile Picture" class="logo">
-            <h1 class="title" style="color: #C17767;"> Alexandria Hancock </h1>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexandria Hancock's Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .btn-secondary {
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: #f7f0f5;
+      --bs-btn-border-color: #3f1b22;
+      --bs-btn-bg: #3f1b22;
+      --bs-btn-hover-color: #3f1b22;
+      --bs-btn-hover-bg: #d4a59a;
+      --bs-btn-hover-border-color: #d4a59a;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Title -->
+  <section id="title" style="background-color: #decbb7;">
+    <div>
+      <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#title">
+            <img src="./assets/Logo girl.png" alt="Logo" class="logo" style="width: 60px;"> 
+              Alexandria Hancock</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#title">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#history">History</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./projects.html">Projects</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="links-container" style="font-family: 'Actor', sans-serif;">
-            <button onclick="window.location.href='https://www.linkedin.com/in/alexandria-lynn/'">LinkedIn Profile</button>
-            <button onclick="window.location.href='https://github.com/alexandria-lynn'">Github Profile</button>
-            <button onclick="window.location.href='assets/Alexandria Hancock Resume.pdf'" draggable="true">Download Resume</button>
-            <button onclick="window.location.href='projects.html'">Projects</button>
-        </div>
-        <div id="summary">
-            <p> Dynamic Software Engineer with experience in developing and maintaining high-impact systems. 
+      </nav>
+    </div>
+    <div class="container col-xxl-8 px-4"> 
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-4"> 
+        <div class="col-10 col-sm-8 col-lg-5"> 
+          <img src="./assets/Slight smile character profile.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="500" loading="lazy"> 
+        </div> 
+        <div class="col-lg-7"> 
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-4">Hi There, <br> I'm Alexandria</h1> 
+          <p class="lead mb-4"> I'm a dynamic Software Engineer with experience in developing and maintaining high-impact systems. 
                 Expertise in Ruby on Rails and Java, combined with a strong foundation in agile methodologies, 
                 drives efficient team collaboration and project delivery. Proven ability to create seamless user 
                 experiences through robust backend systems and effective integration of third-party APIs. 
                 Committed to ensuring product health through data-driven decision-making and continuous improvement 
                 practices. Ready to leverage technical acumen to deliver innovative solutions in a challenging 
-                Software Engineer role. </p>
-            <img src="./assets/Slight smile character profile.png" alt="Slight Smile Character" class="character-profile">
-        </div>
-        <div class="work-container">
-            <h2 class="work-experience">Work Experience</h2>
-            <div class="work-item">
-                <h4>RUBY DEVELOPER AT MUDFLAP INC.</h4>
-                <div class="work-detail"><p>Palo Alto, CA | May 2022 - June 2025</p></div>
-                <ul>
-                    <li>Shipped and maintained multiple credit product systems using Ruby on Rails, hosted on AWS, serving over 500,000 end users. </li>
-                    <li>Developed seamless on-boarding flows and maintained a document upload system for secure PII handling with third-party API integration. </li>
-                    <li>Collaborated with Front End developers to design and implement RESTful endpoints.</li>
-                    <li>Constructed dashboards to track feature success metrics and overall product health, reviewed regularly.</li>
-                    <li>Optimized system performance through code reviews and continuous integration practices.</li>
-                </ul>
-            </div>
-            <div class="work-item">
-                <h4>SQUAD LEAD/GO DEVELOPER AT THE RESERVE TRUST</h4>
-                <div class="work-detail"><p>Denver, CO | June 2021 - May 2022</p></div>
-                <ul>
-                    <li>Contributed to an internal payment processing system as well as multiple automated external communication systems, all built with Golang.</li>
-                    <li>Collaborated with product managers to develop and refine technical requirements, ensuring alignment with business objectives.</li>
-                    <li>Established and implemented comprehensive agile practices, enhancing team structure through squads and chapters.</li>
-                    <li>Led agile ceremonies, proactively identifying bottlenecks and facilitating resolution to maintain team momentum.</li>
-                    <li>Maintained a continuous delivery pipeline and organized Program Increments, ensuring consistent deployment and integration of software updates.</li>
-                </ul>
-            </div>
-            <div class="work-item">
-                <h4>GRADUATE TA FOR KNW1300 AT SMU LYLE SCHOOL OF ENGINEERING</h4>
-                <div class="work-detail"><p>Dallas, TX | August 2018 - June 2021</p></div>
-                <ul>
-                    <li>Mentored teams of 5-7 multi-disciplined engineering students through a semester long design challenge centered around autonomous robotics</li>
-                    <li>Conducted review sessions and provided one-on-one tutoring to enhance student learning outcomes.</li>
-                    <li>Collaborated with faculty to develop and improve course materials and assessments.</li>
-                </ul>
-            </div>
-            <div class="work-item">
-                <h4>RESEARCH ASSISTANT FOR WIRELESS DRONE COMMUNICATIONS</h4>
-                <div class="work-detail"><p>Taos, NM | May 2018 - August 2018</p></div>
-                <ul>
-                    <li>Performed a series of experiments to research the signal strength based on antenna orientation in a SIMO drone setup.</li>
-                    <li>Began researching the validity of channel reciprocity in drone communication systems.</li>
-                </ul>
-            </div>
-            <div class="work-item">
-                <h4>PAINTING INSTRUCTOR AT PAINTING WITH A TWIST</h4>
-                <div class="work-detail"><p>Dallas, TX | October 2017 - March 2020</p></div>
-                <ul>
-                    <li>Developed and delivered engaging painting lessons to students of all ages.</li>
-                    <li>Created a positive and encouraging environment for artistic expression.</li>
-                </ul>
-            </div>
-        </div>
-        <hr>
-        <div class="education-container">
-            <h2 class="education">Education</h2>
-            <div class="work-item">
-                <h4>Southern Methodist University, Bobby B. Lyle School of Engineering</h4>
-                <div class="work-detail"><p>Dallas, TX | August 2016 - May 2021</p></div>
-                <ul>
-                    <li>Masters of Science in Computer Science, Software Concentration - May 2021</li>
-                    <li>Bachelors of Science in Electrical Engineering - May 2020</li>
-                    <li>Bachelors of Science in Mathematics - May 2020</li>
-                </ul>
-            </div>
-        </div>
-        <hr>
-        <div class="skills-container" style="position: relative;">
-            <h2>Skills</h2>
-            <div class="work-item">
-                <ul>
-                    <li>Languages: Ruby, Java, Go Lang, Kotlin, Python, JavaScript</li>
-                    <li>Frameworks: Ruby on Rails, Spring Boot</li>
-                    <li>Databases: PostgreSQL, MySQL</li>
-                    <li>Tools: Git, Docker, Node.js</li>
-                    <li>Cloud Platforms: AWS</li>
-                    <li>Methodologies: Agile (Scrum, Kanban), TDD</li>
-                </ul>
-            </div>
-            <img src="./assets/Big smile character.png" alt="Big Smile Character" class="character">
-        </div>
-        <footer>
-            <p style="padding-top: 150px;">© 2025 Alexandria Hancock. All Rights Reserved</p>
-        </footer>
-    </body>
+                Software Engineer role.</p>
+          <div class="d-grid gap-3 d-md-flex justify-content-md-start"> 
+            <a class="btn btn-secondary btn-lg px-4" href="./assets/Alexandria Hancock Resume.pdf">Resume</a> 
+            <a class="btn btn-secondary btn-lg px-4" href="https://www.linkedin.com/in/alexandria-lynn/">LinkedIn</a> 
+            <a class="btn btn-secondary btn-lg px-4" href="https://github.com/alexandria-lynn">Github</a> 
+          </div> 
+        </div> 
+      </div> 
+    </div>
+
+  </section>
+  <!-- History -->
+  <section id="history">
+    <div class="container">
+      <h2 class="fw-bold text-body-emphasis lh-1 mb-4">History</h2>
+      <p class="lead mb-4">Brief history about Alexandria Hancock.</p>
+    </div>
+  </section>
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container justify-content-center align-items-center">
+      <h2 class="fw-bold text-body-emphasis lh-1 mb-4">Skills</h2>
+      <p class="lead mb-4">A list of skills Alexandria Hancock possesses.</p>
+      <ul>
+        <li>Ruby on Rails</li>
+        <li>Java</li>
+        <li>Agile Methodologies</li>
+        <li>API Integration</li>
+        <li>Data-Driven Decision Making</li>
+      </ul>
+    </div>
+
+  </section>
+  <!-- Footer -->
+  <section id="footer" style="background-color: #decbb7;">
+    <div class="container"> 
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-4 mt-4 border-top"> 
+        <div class="col-md-4 d-flex align-items-center"> 
+          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap"> 
+            <svg class="bi" width="30" height="24" aria-hidden="true"><use xlink:href="#bootstrap"></use></svg> 
+          </a> 
+          <span class="mb-3 mb-md-0 text-body-secondary">© 2025 Alexandria Hancock</span> 
+        </div> 
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex"> 
+          <li class="ms-3">
+            <a class="text-body-secondary" href="https://github.com/alexandria-lynn" aria-label="Github">
+              <img src="./assets/github.png" alt="Github" width="35" height="auto">
+            </a>
+          </li> 
+          <li class="ms-3">
+            <a class="text-body-secondary" href="https://www.linkedin.com/in/alexandria-lynn/" aria-label="LinkedIn">
+              <img src="./assets/linkedin.png" alt="LinkedIn" width="35" height="auto">
+            </a>
+          </li> 
+        </ul> 
+      </footer> 
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+
 </html>
