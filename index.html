@@ -5,19 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alexandria Hancock's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="style.css">
   <style>
-    .btn-secondary {
-      --bs-btn-font-weight: 600;
-      --bs-btn-color: #f7f0f5;
-      --bs-btn-border-color: #3f1b22;
-      --bs-btn-bg: #3f1b22;
-      --bs-btn-hover-color: #3f1b22;
-      --bs-btn-hover-bg: #d4a59a;
-      --bs-btn-hover-border-color: #d4a59a;
-    }
   </style>
 </head>
 
@@ -26,16 +20,17 @@
   <!-- Title -->
   <section id="title" style="background-color: #decbb7;">
     <div>
-      <nav class="navbar navbar-expand-lg bg-transparent">
+      <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #decbb7f3; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#title">
+          <a class="navbar-brand" href="#title" style="font-family: pacifico, cursive; font-size: 25px; color: #3f1b22;">
             <img src="./assets/Logo girl.png" alt="Logo" class="logo" style="width: 60px;"> 
               Alexandria Hancock</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#title">About</a>
               </li>
@@ -56,26 +51,32 @@
         </div>
       </nav>
     </div>
-    <div class="container col-xxl-8 px-4"> 
-      <div class="row flex-lg-row-reverse align-items-center g-5 py-4"> 
-        <div class="col-10 col-sm-8 col-lg-5"> 
-          <img src="./assets/Slight smile character profile.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="500" loading="lazy"> 
-        </div> 
-        <div class="col-lg-7"> 
-          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-4">Hi There, <br> I'm Alexandria</h1> 
-          <p class="lead mb-4"> I'm a dynamic Software Engineer with experience in developing and maintaining high-impact systems. 
-                Expertise in Ruby on Rails and Java, combined with a strong foundation in agile methodologies, 
-                drives efficient team collaboration and project delivery. Proven ability to create seamless user 
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mt-1 pt-5">
+          <div style="height: 10px; width: 100%;  margin-top: 0px;"></div>
+      </div>
+    </div>
+    <div class="container col-xxl-12 px-4"> 
+      <div class="row align-items-center g-5 py-4">  
+        <div class="col-lg-7 text-lg-start"> 
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 my-5">Hi there, I'm <br> 
+            <span style="font-family: 'pacifico', cursive; letter-spacing: 2px;  color: #3f1b22;"> Alexandria Hancock.</span></h1> 
+          <p class="lead mb-5"> I'm a dynamic Software Engineer with experience in developing and maintaining high-impact systems. 
+                I have expertise in Ruby on Rails and Java, and when combined with my strong foundation in agile methodologies, 
+                I drive efficient team collaboration and project delivery. I have a proven ability to create seamless user 
                 experiences through robust backend systems and effective integration of third-party APIs. 
-                Committed to ensuring product health through data-driven decision-making and continuous improvement 
-                practices. Ready to leverage technical acumen to deliver innovative solutions in a challenging 
-                Software Engineer role.</p>
-          <div class="d-grid gap-3 d-md-flex justify-content-md-start"> 
+                I'm committed to ensuring product health through data-driven decision-making and continuous improvement 
+                practices.</p>
+          <div class="d-grid gap-4 d-md-flex justify-content-md-start"> 
             <a class="btn btn-secondary btn-lg px-4" href="./assets/Alexandria Hancock Resume.pdf">Resume</a> 
             <a class="btn btn-secondary btn-lg px-4" href="https://www.linkedin.com/in/alexandria-lynn/">LinkedIn</a> 
             <a class="btn btn-secondary btn-lg px-4" href="https://github.com/alexandria-lynn">Github</a> 
           </div> 
         </div> 
+        <div id="profile-image"class="col-sm-12 col-lg-5"> 
+          <img src="./assets/Slight smile character profile.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="500" loading="lazy"> 
+        </div>
       </div> 
     </div>
 
@@ -83,9 +84,9 @@
   <!-- History -->
   <section id="history">
     <div class="container mt-5">
-      <h2 class="mt-4 mb-3 fw-bold text-center">Work Experience</h2>
+      <h2 class="mt-5 mb-3 fw-bold text-center">Work Experience</h2>
         <div class="work-item">
-            <h4 class="mt-4">RUBY DEVELOPER AT MUDFLAP INC.</h4>
+            <h4 class="mt-5">RUBY DEVELOPER AT MUDFLAP INC.</h4>
             <div class="work-detail"><p>Palo Alto, CA | May 2022 - June 2025</p></div>
             <ul>
                 <li>Shipped and maintained multiple credit product systems using Ruby on Rails, hosted on AWS, serving over 500,000 end users. </li>
@@ -136,27 +137,38 @@
 
   <!--Education-->
   <section id="education" style="background-color: #decbb7;">
-    <div class="container my-5 py-5 text-center">
-      <h2 class="fw-bold text-center lh-1 mb-4">Education</h2>
-      <div class="row">
-        <div class="">
-          <h4>Southern Methodist University, Bobby B. Lyle School of Engineering</h4>
-          <div class="work-detail"><p>Dallas, TX | August 2016 - May 2021</p></div>
-          <p>Masters of Science in Computer Science, Software Concentration - May 2021</p>
-          <p>Bachelors of Science in Electrical Engineering - May 2020</p>
-          <p>Bachelors of Science in Mathematics - May 2020</p>
-        </div>
+    <div class="container my-5 py-3">
+      <div class="container pt-4 text-center">
+        <h2 class="fw-bold text-center lh-1 my-3">Education</h2>
+      </div>
+      <div class="container col-xxl-12 px-4 pb-5"> 
+        <div class="row align-items-center">
+          <div id="profile-image"class="col-sm-12 col-lg-4"> 
+            <img src="./assets/Working character.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy"> 
+          </div> 
+          <div class="col-lg-7 text-lg-start"> 
+            <div class="">
+            <h4>Southern Methodist University, Bobby B. Lyle School of Engineering</h4>
+            <div class="work-detail"><p>Dallas, TX | August 2016 - May 2021</p></div>
+            <ul>
+              <li>Masters of Science in Computer Science, Software Concentration - May 2021</li>
+              <li>Bachelors of Science in Electrical Engineering - May 2020</li>
+              <li>Bachelors of Science in Mathematics - May 2020</li>
+            </ul>
+          </div>
+          </div> 
+        </div> 
       </div>
     </div>
   </section>
   <!-- Skills -->
   <section id="skills">
     <div class="container mt-2 py-1 text-center">
-      <h2 class="fw-bold text-center lh-1 my-2">Skills</h2>
+      <h2 class="fw-bold text-center lh-1 my-2 py-4">Skills</h2>
       <div class="row">
         <div class="col-md-4">
           <div class="container">
-            <h3 class="my-3">Languages</h3>
+            <h4 class="my-3">Languages</h4>
             <p>Ruby</p>
             <p>Java</p>
             <p>Go Lang</p>
@@ -168,10 +180,10 @@
         </div>
         <div class="col-md-4">
           <div class="container">
-            <h3 class="my-3">Tools and Frameworks</h3>
+            <h4 class="my-3">Tools and Frameworks</h4>
             <p>Ruby on Rails</p>
             <p>Spring Boot</p>
-            <p>Vue.js</p>
+            <p>React</p>
             <p>Tailwind CSS</p>
             <p>PostgreSQL</p>
             <p>Node.js</p>
@@ -212,6 +224,7 @@
   </section>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>
